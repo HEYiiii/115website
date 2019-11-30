@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -7,60 +8,47 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/w_navbar.css"> -->
+    <link rel="stylesheet" href="assets/css/pw_backicon.css">
     <link rel="stylesheet" href="assets/css/w_message.css">
-    <script src="assets/js/p_Back.js"></script>
     <title>Document</title>
-    <style>
-        
-
-
-    </style>
 </head>
+
 <body>
 
-<div id="pNavbar">
-    <div class="pNavbar" onclick="pBack()">
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="tagBall">
-    </div>
+    <div id="pNavbar">
+        <div class="pNavbar" onclick="pBack()">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        <div class="tagBall">
+        </div>
         <div class="w_messageInput">
             <p id="ppp">Hi，写下你想对SIPCer说的话吧</p>
             <input id="name" type="text" value="" style="display: none;"></input>
-            <div class="w_inputBox1" >
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
+            <div class="w_inputBox1">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
             </div>
             <div class="w_inputBox2">
-                <input  id="content" type="text" value="" placeholder="输入你想写寄语吧!">
+                <input id="content" type="text" value="" placeholder="输入你想写寄语吧!">
                 <i class="fa fa-paper-plane-o" id="ajaxBtn" aria-hidden="true"></i>
             </div>
         </div>
-    
-    <!-- <div class="inputBoxHid" style="display: none;">
-        <i class="fa fa-times" aria-hidden="true"></i>
-        <p>留下你的寄语吧!</p>
-        <div class="nameBox">
-            <input id="name" type="text" placeholder="输入你的名字">
-        </div>
-        <textarea class="contentBox" id="content" placeholder="输入你想写寄语吧!"></textarea>
-        <input id="ajaxBtn" class="submitBtn" type="button" value="提交">
-    </div> -->
-</div>
-<script>
-</script>
+    </div>
     <script>
-        function getheight(){
-			var hei="";
-			var wid="";
-			hei=window.screen.availHeight;
-			wid=window.screen.availWidth;
-			var h=document.getElementById("pNavbar").style.height=hei+"px";
-			var w=document.getElementById("pNavbar").style.width=wid+"px";
-			console.log(w+"*"+h);
-		}
-		getheight();
     </script>
+    <script>
+        function getheight() {
+            var hei = "";
+            var wid = "";
+            hei = window.screen.availHeight;
+            wid = window.screen.availWidth;
+            var h = document.getElementById("pNavbar").style.height = hei + "px";
+            var w = document.getElementById("pNavbar").style.width = wid + "px";
+            console.log(w + "*" + h);
+        }
+        getheight();
+    </script>
+    <script src="assets/js/p_Back.js"></script>
     <script src="assets/js/w_message.js"></script>
 </body>
+
 </html>
