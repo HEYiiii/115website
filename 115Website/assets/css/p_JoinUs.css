@@ -12,14 +12,8 @@ p {
     position: fixed;
     top: 0;
 }
-.fa-angle-right {
-    margin-top: 40px;
-    margin-left: 30px;
-    font-size:50px;
-    color: #4dc9cc;
-}
 /* 方向内容 */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     .pDir {
         width: 100%;
         max-width: 250px;
@@ -100,30 +94,6 @@ hr {
 }
 /* ************************************************* */
 
-/* 箭头动画 */
-.pBack {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-    -webkit-animation: rotate 1s ease 1;
-    -moz-animation: rotate 1s ease 1;
-    -o-animation: rotate 1s ease 1;
-    animation: rotate 1s ease 1;
-}
-@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
-    to{-webkit-transform: rotate(900deg)}
-}
-@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
-    to{-moz-transform: rotate(900deg)}
-}
-@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
-    to{-o-transform: rotate(900deg)}
-}
-@keyframes rotate{from{transform: rotate(0deg)}
-    to{transform: rotate(900deg)}
-}
-/* *********************************************** */
 #pDirect{
     width: 250px;
     /* width: 100%; */

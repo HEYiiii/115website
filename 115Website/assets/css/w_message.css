@@ -3,12 +3,6 @@ body{
     width: 100%;
     background-color: #f8f8f8;
 }
-.fa-angle-right{
-    margin-top: 40px;
-    margin-left: 30px;
-    font-size:50px;
-    color: #4dc9cc
-}
 .tagBall {
     overflow: hidden;
     width: 100%;
@@ -31,13 +25,10 @@ body{
   }
   
 .w_usename{
-    /* font-family: fontUI; */
-    /* color: #717171; */
     font-size: 12px;
     line-height: 1.4em;
 }
 .w_content{
-    /* font-family: fontUI; */
     color: #3e3e3e;
     line-height: 1.7em;
     width: 100px;
@@ -46,40 +37,6 @@ body{
     font-family: 'fontUI';
     src: url('../fonts-family/fontUI.ttf');
 }
-/* .tag span{
-    display: block;
-    width: 150px;
-    height: 30px;
-    top: 0px;
-    font-size: 15px;
-} */
-/* .inputBox:hover>i {
-    color: #00a1e9;
-    transition: .5s linear;
-} */
-/* .messageInput {
-    width: 100%;
-    margin-top: 2em;
-    text-align: center;
-} */
-
-/* .inputBox:hover {
-    transition: .5s linear;
-    cursor: pointer;
-} */
-
-/* .inputBox:hover>i {
-    color: #00a1e9;
-    transition: .5s linear;
-} */
-/* 
-.w_inputBox {
- 
-    background-color: #fff;
-    height: 4rem;
-    margin: 1.5em auto;
-}
-*/
 .w_messageInput {
     width: 100%;
     margin-top: 2rem;
@@ -140,25 +97,3 @@ body{
     margin: .5em auto;
 }
 
-.open{
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-    -webkit-animation: rotate 1s ease 1;
-    -moz-animation: rotate 1s ease 1;
-    -o-animation: rotate 1s ease 1;
-    animation: rotate 1s ease 1;
-}
-@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
-    to{-webkit-transform: rotate(900deg)}
-}
-@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
-    to{-moz-transform: rotate(900deg)}
-}
-@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
-    to{-o-transform: rotate(900deg)}
-}
-@keyframes rotate{from{transform: rotate(0deg)}
-    to{transform: rotate(900deg)}
-}

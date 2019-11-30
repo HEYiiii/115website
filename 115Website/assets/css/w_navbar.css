@@ -1,11 +1,6 @@
 body{
     background-color: #223A4D;
-}
-.fa-angle-left{
-    margin-top: 40px;
-    margin-left: 30px;
-    font-size:50px;
-    color: #4dc9cc;
+    width: 100%;
 }
 #w_bar{
     position: absolute;
@@ -16,7 +11,6 @@ body{
     left: 50%;
     clear:both;
 }
-
 .w_bar1,.w_bar2,.w_bar3,.w_bar4{
     height: 72px;
 }
@@ -25,7 +19,7 @@ body{
 .w_bar3{margin-left: 0.625rem;}
 .w_bar4{margin-left: 5rem;}
 .w_btn{
-    margin: 0px -.5px;
+    /* margin: 0px -.5px; */
     border: 1px solid #979797;
     height: 70px;
     float: left;
@@ -81,6 +75,7 @@ body{
 }
 #w_footer>p{
     color: #979797;
+    width: 100%;
     font-size: 17px;
     line-height: 24px;
     font-family: PingFangSC-Regular, sans-serif;
@@ -93,55 +88,9 @@ body{
     height: 140px;
     clear:both;
 }
-/* 动画 */
-.back{
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-    -webkit-animation: rotate 1s ease 1;
-    -moz-animation: rotate 1s ease 1;
-    -o-animation: rotate 1s ease 1;
-    animation: rotate 1s ease 1;
-}
-@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
-    to{-webkit-transform: rotate(-900deg)}
-}
-@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
-    to{-moz-transform: rotate(-900deg)}
-}
-@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
-    to{-o-transform: rotate(-900deg)}
-}
-@keyframes rotate{from{transform: rotate(0deg)}
-    to{transform: rotate(-900deg)}
-}
-.open{
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-    -webkit-animation: rotate 1s ease 1;
-    -moz-animation: rotate 1s ease 1;
-    -o-animation: rotate 1s ease 1;
-    animation: rotate 1s ease 1;
-}
-@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
-    to{-webkit-transform: rotate(900deg)}
-}
-@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
-    to{-moz-transform: rotate(900deg)}
-}
-@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
-    to{-o-transform: rotate(900deg)}
-}
-@keyframes rotate{from{transform: rotate(0deg)}
-    to{transform: rotate(900deg)}
-}
 
 
-
-
+/* 右上右下块的动画 */
 .w_btn2Change{
     animation: btn2Change 0.4s ease-out;
 }
@@ -172,6 +121,7 @@ body{
         transform:translate(0,0) scale(1.0);
     }
 }
+/* sipclogo的动画 */
 .w_sipclogoChange{
     animation: sipclogoChange 0.4s ease-out;
 }
