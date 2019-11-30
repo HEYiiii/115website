@@ -7,7 +7,7 @@ function pBack() {
             document.getElementById("pNavbar").style.display='none';
             window.location = "w_navbar.html";
             nav.className = "fa fa-angle-right";
-        }, 1000)
+        }, 800)
     }
 }
 
@@ -20,6 +20,6 @@ function back() {//关闭导航
             document.getElementById("w_navbar").style.display='none';
             window.history.go(-1);
             nav.className = "fa fa-angle-left";
-        }, 1000)
+        }, 800)
     }
 }

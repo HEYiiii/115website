@@ -1,85 +1,85 @@
 // 
-var obj = [{
-    "name": "牛梓雨1",
-    "content": "我是前端狗。。。。"
-}, {
-    "name": "邓佳骏2",
-    "content": "我是前端狗。。。。。"
-}, {
-    "name": "王康力3",
-    "content": "我是全能狗。。"
-}, {
-    "name": "大宝贝4",
-    "content": "我是后端狗。。"
-}, {
-    "name": "马嘉骏5",
-    "content": "我是机器学习狗我是机器学习狗我是机器学习狗"
-}, {
-    "name": "刘致远6",
-    "content": "我是算法狗。。。。"
-}, {
-    "name": "小猫咪7",
-    "content": "你你好好呀呀。。。"
-}, {
-    "name": "小狗狗8",
-    "content": "今年不护肤，明年老阿姨"
-}, {
-    "name": "小狗狗9",
-    "content": "汪汪汪汪汪汪汪汪汪"
-}, {
-    "name": "小狗狗10",
-    "content": "易烊千玺的女孩要努力练舞"
-}, {
-    "name": "小狗狗11",
-    "content": "汪汪汪汪汪汪汪汪汪"
-}, {
-    "name": "小狗狗12",
-    "content": "每周打球30分钟"
-}, {
-    "name": "马嘉骏13",
-    "content": "我是机器学习狗我是机器学习狗我是机器学习狗"
-}, {
-    "name": "刘致远14",
-    "content": "我是算法狗。。。。"
-}, {
-    "name": "小猫咪15",
-    "content": "你你好好呀呀。。。"
-}, {
-    "name": "小狗狗16",
-    "content": "今年不护肤，明年老阿姨"
-}, {
-    "name": "小狗狗17",
-    "content": "汪汪汪汪汪汪汪汪汪"
-}, {
-    "name": "小狗狗18",
-    "content": "易烊千玺的女孩要努力练舞"
-}, {
-    "name": "小狗狗19",
-    "content": "汪汪汪汪汪汪汪汪汪"
-}, {
-    "name": "小狗狗20",
-    "content": "每周打球30分钟"
-}]
-function getArrayItems(arr, num) {
-    var copyMessage=[];
-    for (var index in arr) {
-        copyMessage.push(obj[index]);
-    }
-    var return_array = new Array();
-    for (var i = 0; i<num; i++) {
-        if (copyMessage.length>0) {
-            var arrIndex = Math.floor(Math.random()*copyMessage.length);
-            return_array[i] = copyMessage[arrIndex];
-            copyMessage.splice(arrIndex, 1);
-        } else {
-            break;
-        }
-    }
-    return return_array;
-}
-var fewMessage=getArrayItems(obj,5);
+// var obj = [{
+//     "name": "牛梓雨1",
+//     "content": "我是前端狗。。。。"
+// }, {
+//     "name": "邓佳骏2",
+//     "content": "我是前端狗。。。。。"
+// }, {
+//     "name": "王康力3",
+//     "content": "我是全能狗。。"
+// }, {
+//     "name": "大宝贝4",
+//     "content": "我是后端狗。。"
+// }, {
+//     "name": "马嘉骏5",
+//     "content": "我是机器学习狗我是机器学习狗我是机器学习狗"
+// }, {
+//     "name": "刘致远6",
+//     "content": "我是算法狗。。。。"
+// }, {
+//     "name": "小猫咪7",
+//     "content": "你你好好呀呀。。。"
+// }, {
+//     "name": "小狗狗8",
+//     "content": "今年不护肤，明年老阿姨"
+// }, {
+//     "name": "小狗狗9",
+//     "content": "汪汪汪汪汪汪汪汪汪"
+// }, {
+//     "name": "小狗狗10",
+//     "content": "易烊千玺的女孩要努力练舞"
+// }, {
+//     "name": "小狗狗11",
+//     "content": "汪汪汪汪汪汪汪汪汪"
+// }, {
+//     "name": "小狗狗12",
+//     "content": "每周打球30分钟"
+// }, {
+//     "name": "马嘉骏13",
+//     "content": "我是机器学习狗我是机器学习狗我是机器学习狗"
+// }, {
+//     "name": "刘致远14",
+//     "content": "我是算法狗。。。。"
+// }, {
+//     "name": "小猫咪15",
+//     "content": "你你好好呀呀。。。"
+// }, {
+//     "name": "小狗狗16",
+//     "content": "今年不护肤，明年老阿姨"
+// }, {
+//     "name": "小狗狗17",
+//     "content": "汪汪汪汪汪汪汪汪汪"
+// }, {
+//     "name": "小狗狗18",
+//     "content": "易烊千玺的女孩要努力练舞"
+// }, {
+//     "name": "小狗狗19",
+//     "content": "汪汪汪汪汪汪汪汪汪"
+// }, {
+//     "name": "小狗狗20",
+//     "content": "每周打球30分钟"
+// }]
+// function getArrayItems(arr, num) {
+//     var copyMessage=[];
+//     for (var index in arr) {
+//         copyMessage.push(obj[index]);
+//     }
+//     var return_array = new Array();
+//     for (var i = 0; i<num; i++) {
+//         if (copyMessage.length>0) {
+//             var arrIndex = Math.floor(Math.random()*copyMessage.length);
+//             return_array[i] = copyMessage[arrIndex];
+//             copyMessage.splice(arrIndex, 1);
+//         } else {
+//             break;
+//         }
+//     }
+//     return return_array;
+// }
+// var fewMessage=getArrayItems(obj,5);
 
-createBox();
+// createBox();
 function rollBalls(){
     var tagEle = document.getElementsByClassName("tag"),
     paper = document.getElementsByClassName("tagBall")[0];
@@ -182,7 +182,7 @@ function rollBalls(){
     innit();
     animate();
 }
-function createBox(){
+function createBox(fewMessage){//要传参
     for(var i=0;i<fewMessage.length;i++){//创建盒子
         let boxFather = document.getElementsByClassName("tagBall")[0];
         let box = document.createElement("a");
@@ -201,11 +201,9 @@ function createBox(){
     }
     rollBalls();
 }
-function changeBoxs(){
+function changeBoxs(){//底下输入框的切换
     var w_inputBox1=document.getElementsByClassName("w_inputBox1")[0];
     var w_inputBox2=document.getElementsByClassName("w_inputBox2")[0];
-    // document.getElementsByClassName("fa-times")[0].addEventListener("click", inputBox);
-    // var inputBox=document.getElementsByClassName("w_messageInput")[0];
     w_inputBox1.addEventListener("click", inputBox);
     var name=document.getElementById("name");
     var ppp=document.getElementById("ppp");
