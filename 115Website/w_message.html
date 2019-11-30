@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="assets/css/w_navbar.css"> -->
     <link rel="stylesheet" href="assets/css/w_message.css">
+    <script src="assets/js/p_Back.js"></script>
     <title>Document</title>
     <style>
         
@@ -18,9 +19,9 @@
 </head>
 <body>
 
-<div id="w_message">
-    <div id="w_right">
-        <i class="fa fa-angle-right" aria-hidden="true" onclick="out()"></i>
+<div id="pNavbar">
+    <div class="pNavbar" onclick="pBack()">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="tagBall">
     </div>
@@ -54,8 +55,8 @@
 			var wid="";
 			hei=window.screen.availHeight;
 			wid=window.screen.availWidth;
-			var h=document.getElementById("w_message").style.height=hei+"px";
-			var w=document.getElementById("w_message").style.width=wid+"px";
+			var h=document.getElementById("pNavbar").style.height=hei+"px";
+			var w=document.getElementById("pNavbar").style.width=wid+"px";
 			console.log(w+"*"+h);
 		}
 		getheight();
