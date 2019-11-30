@@ -1,0 +1,184 @@
+body{
+    background-color: #223A4D;
+}
+.fa-angle-left{
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size:50px;
+    color: #4dc9cc;
+}
+#w_bar{
+    position: absolute;
+    margin-left: -11.5rem;
+    width: 23.44rem;
+    height: 288px;
+    top: 30%;
+    left: 50%;
+    clear:both;
+}
+
+.w_bar1,.w_bar2,.w_bar3,.w_bar4{
+    height: 72px;
+}
+.w_bar1{margin-left: 2rem;}
+.w_bar2{margin-left: 4rem;}
+.w_bar3{margin-left: 0.625rem;}
+.w_bar4{margin-left: 5rem;}
+.w_btn{
+    margin: 0px -.5px;
+    border: 1px solid #979797;
+    height: 70px;
+    float: left;
+}
+.w_btnBox>p{
+    float: right;
+    color: #00ccce;
+    margin: 5px 5px 0px 0px;
+}
+#w_btn1,#w_btn3,#w_btn5,#w_btn7{
+    font-size: 18px;
+    line-height: 25px;
+    font-family: fontUI;
+    letter-spacing: 10px;
+}
+#w_btn2,#w_btn4,#w_btn6,#w_btn8{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Didot;
+    font-weight: bold;
+}
+#w_btn1,#w_btn7{width: 8.4rem;}
+#w_btn2,#w_btn8{width: 9.3rem;}
+#w_btn3{width: 8rem;}
+#w_btn4{width: 9.64rem;}
+#w_btn5{width: 9.4rem;}
+#w_btn6{width: 9.7rem;}
+@font-face {
+    font-family: 'Didot';
+    src: url('../fonts-family/Didot.ttf');
+}
+@font-face{
+    font-family: 'fontUI';
+    src: url('../fonts-family/fontUI.ttf');
+}
+.w_btn:active>.w_btnBox{
+    background-color: #00ccce;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease;
+    transform: translate(-10px, -10px);
+}
+.w_btn:active>.w_btnBox>p{
+
+    float: right;
+    color: #fff;
+}
+#w_footer img{
+    width: 2rem;
+    height: 2rem;
+    margin: 0px auto;
+    color: #979797;
+}
+#w_footer>p{
+    color: #979797;
+    font-size: 17px;
+    line-height: 24px;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+#w_footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    clear:both;
+}
+/* 动画 */
+.back{
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+    -webkit-animation: rotate 1s ease 1;
+    -moz-animation: rotate 1s ease 1;
+    -o-animation: rotate 1s ease 1;
+    animation: rotate 1s ease 1;
+}
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+    to{-webkit-transform: rotate(-900deg)}
+}
+@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
+    to{-moz-transform: rotate(-900deg)}
+}
+@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
+    to{-o-transform: rotate(-900deg)}
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(-900deg)}
+}
+.open{
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+    -webkit-animation: rotate 1s ease 1;
+    -moz-animation: rotate 1s ease 1;
+    -o-animation: rotate 1s ease 1;
+    animation: rotate 1s ease 1;
+}
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+    to{-webkit-transform: rotate(900deg)}
+}
+@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
+    to{-moz-transform: rotate(900deg)}
+}
+@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
+    to{-o-transform: rotate(900deg)}
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(900deg)}
+}
+
+
+
+
+.w_btn2Change{
+    animation: btn2Change 0.4s ease-out;
+}
+@keyframes btn2Change{
+    0%{transform: translate(-50%,-80px) scale(1.5,2);
+    }
+    100%{
+        transform:translate(0,0) scale(1.0,1.0);
+    }
+}
+.w_changes{
+    animation: changes 0.4s ease-out;
+}
+@keyframes changes{
+    0%{transform: translate(20%,40%);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+.w_btn8Change{
+    animation: btn8Change 0.4s ease-out;
+}
+@keyframes btn8Change{
+    0%{transform: translate(-50%,100px) scale(1.5,2);
+    }
+    100%{
+        transform:translate(0,0) scale(1.0);
+    }
+}
+.w_sipclogoChange{
+    animation: sipclogoChange 0.4s ease-out;
+}
+@keyframes sipclogoChange{
+    0%{transform: translate(-120px,60px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}

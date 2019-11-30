@@ -1,0 +1,21 @@
+.bottom {
+    position: relative;
+    width: 100%;
+    background-color: #202020;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+    line-height: 2em;
+}
+
+.bottom img {
+    width: 1.15em;
+    height: 1.15em;
+    margin-top: 1.25em;
+    margin-right: .5em;
+    display: inline;
+}
+
+.bottom p {
+    display: inline;
+}
