@@ -1,6 +1,7 @@
 body{
     background-color: #223A4D;
     width: 100%;
+    overflow: hidden;
 }
 #w_bar{
     position: absolute;
