@@ -8,13 +8,13 @@
     <title>p_Dynamics</title>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel='stylesheet' href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/p_Dynamics.css">	
+    <link rel="stylesheet" href="assets/css/p_Dynamics.css">
     <link rel="stylesheet" href="assets/css/pw_backicon.css">
 </head>
 
 <body>
     <div id="pNavbar">
-        <div class="pNavbar" onclick="pBack()">
+        <div class="pNavbar">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
         </div>
         <div class="pContainer">
@@ -29,7 +29,19 @@
             </p>
         </div>
     </div>
-    <script src="assets/js/p_Back.js"></script>
+    <!-- <script src="assets/js/p_Back.js"></script> -->
+    <script>
+        var nav = document.getElementsByClassName("fa-angle-right")[0];
+        nav.addEventListener("click", StartAnimation, false);
+        function StartAnimation() {
+            nav.className = "fa fa-angle-right pBack";
+            setTimeout(function () {
+                document.getElementById("pNavbar").style.display = 'none';
+                window.location = "w_navbar.html";
+                nav.className = "fa fa-angle-right";
+            }, 800)
+        }
+    </script>
 </body>
 
 </html>

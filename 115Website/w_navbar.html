@@ -14,7 +14,7 @@
 
 <body>
 	<div id="w_navbar" style="display: block;">
-		<div id="w_left" onclick="back()">
+		<div id="w_left">
 			<i class="fa fa-angle-left " aria-hidden="true"></i>
 		</div>
 		<div id="w_bar">
@@ -76,18 +76,28 @@
 		</div>
 	</div>
 	<!-- <script src="assets/js/w_navbar.js"></script> -->
-	<script src="assets/js/p_Back.js"></script>
+	<!-- <script src="assets/js/p_Back.js"></script> -->
 	<script>
-		function getheight(){
-			var hei="";
-			var wid="";
-			hei=window.screen.availHeight;
-			wid=window.screen.availWidth;
-			var h=document.getElementById("w_navbar").style.height=hei+"px";
-			var w=document.getElementById("w_navbar").style.width=wid+"px";
-			console.log(w+"*"+h);
+		function getheight() {
+			var hei = "";
+			var wid = "";
+			hei = window.screen.availHeight;
+			wid = window.screen.availWidth;
+			var h = document.getElementById("w_navbar").style.height = hei + "px";
+			var w = document.getElementById("w_navbar").style.width = wid + "px";
+			console.log(w + "*" + h);
 		}
 		getheight();
+		var nav1 = document.getElementsByClassName("fa-angle-left")[0];
+		nav1.addEventListener("click", StartAnimation, false);
+		function StartAnimation() {
+			nav1.className = "fa fa-angle-left back";
+			setTimeout(function () {
+				document.getElementById("w_navbar").style.display = 'none';
+				window.history.go(-1);
+				nav1.className = "fa fa-angle-left";
+			}, 800)
+		}
 	</script>
 </body>
 

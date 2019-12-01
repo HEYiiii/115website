@@ -16,7 +16,7 @@
 <body>
 
     <div id="pNavbar">
-        <div class="pNavbar" onclick="pBack()">
+        <div class="pNavbar">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
         </div>
         <div class="tagBall">
@@ -47,8 +47,21 @@
         }
         getheight();
     </script>
-    <script src="assets/js/p_Back.js"></script>
+    <!-- <script src="assets/js/p_Back.js"></scrip
+        t> -->
     <script src="assets/js/w_message.js"></script>
+    <script>
+        var nav = document.getElementsByClassName("fa-angle-right")[0];
+        nav.addEventListener("click", StartAnimation, false);
+        function StartAnimation() {
+            nav.className = "fa fa-angle-right pBack";
+            setTimeout(function () {
+                document.getElementById("pNavbar").style.display = 'none';
+                window.location = "w_navbar.html";
+                nav.className = "fa fa-angle-right";
+            }, 800)
+        }
+    </script>
 </body>
 
 </html>
