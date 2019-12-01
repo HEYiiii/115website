@@ -15,12 +15,13 @@ function zyNavbar() {
     function menuBtn() {
         let btn = document.getElementById('menuBtn');
         btn.addEventListener('click', function() {
-            let menuHid = document.getElementById('menuHidden');
-            if (menuHid.style.display == 'none') {
-                menuHid.style.display = 'block';
-            } else {
-                menuHid.style.display = 'none';
-            }
+            // let menuHid = document.getElementById('menuHidden');
+            // if (menuHid.style.display == 'none') {
+            //     menuHid.style.display = 'block';
+            // } else {
+            //     menuHid.style.display = 'none';
+            // }
+            window.location.href = './w_navbar.html';
         })
     }
     window.addEventListener('resize', function() {

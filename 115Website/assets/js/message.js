@@ -42,8 +42,8 @@ function message() {
         processData: false,
         url: "http://192.168.115.77:8080/messageboard/api/message/get",
 
-        success: function(result) {
-            createBoxRandom(result.result);
+        success: function(response) {
+            createBoxRandom(response.result);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("请求失败");
@@ -105,20 +105,21 @@ function message() {
     }
     // createBoxRandom(obj);
     $('#ajaxBtn').click(function() {
-        var dataObj = {
-            name: document.getElementById("name").value,
-            content: document.getElementById('content').value
+        var Obj = {
+            "send_id": document.getElementById("name").value,
+            "message": document.getElementById('content').value
         }
-        if (dataObj.name == "" && dataObj.content == "") {
+        if (Obj.send_id == "" && dataObj.message == "") {
             alert("内容不能为空!");
         }
+        var dataObj = JSON.stringify(Obj);
         $.ajax({
-            type: 'get',
-            dataType: "jsonp",
+            contentType: "application/json;charset=utf-8",
+            type: 'post',
+            dataType: "JSON",
             processData: false,
             url: "http://192.168.115.77:8080/messageboard/api/message/add",
             data: dataObj,
-
             success: function(result) {
                 alert("提交成功");
                 document.getElementsByClassName("inputBoxHid")[0].style.display = "none";

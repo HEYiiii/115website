@@ -7,34 +7,209 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/timeLine.css" />
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/font-word.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/bottom.css">
+    <link rel="stylesheet" href="assets/css/aboutUs.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
 </head>
 
 <body>
-    <!-- 这里是固定的navbar元素块 -->
-    <div class="zyNavbar">
-        <i class="fa fa-bars" id='menuBtn' style="display:none;" aria-hidden="true"></i>
-        <div id="menuHidden" style='display:none;'>
-            <!-- <a href="index.html" style="color:#00a1e9;">首页</a> -->
-            <a href="aboutUs.html">我们</a>
-            <a href="dynamics.html">动态</a>
-            <a href="message.html">寄语</a>
-            <a href="recruit.html">招募</a>
+    <div id="app">
+        <div class="zyNavbar">
+            <i class="fa fa-bars" id='menuBtn' style="display:none;" aria-hidden="true"></i>
+            <div id="menuHidden" style='display:none;'>
+                <!-- <a href="index.html" style="color:#00a1e9;">首页</a> -->
+                <a href="aboutUs.html">我们</a>
+                <a href="dynamics.html">动态</a>
+                <a href="message.html">寄语</a>
+                <a href="recruit.html">招募</a>
+            </div>
+            <img src='assets/img/sipc.jpg' id='sipc-icon'>
+            <!-- <p id='sipc'>SIPC</p> -->
+            <div class="menu">
+                <!-- <a href="index.html" style="color:#00a1e9;">首页</a> -->
+                <a href="aboutUs.html">我们</a>
+                <a href="dynamics.html">动态</a>
+                <a href="message.html">寄语</a>
+                <a href="recruit.html">招募</a>
+            </div>
         </div>
-        <img src='assets/img/sipc.jpg' id='sipc-icon'>
-        <!-- <p id='sipc'>SIPC</p> -->
-        <div class="menu">
-            <!-- <a href="index.html" style="color:#00a1e9;">首页</a> -->
-            <a href="aboutUs.html">我们</a>
-            <a href="dynamics.html">动态</a>
-            <a href="message.html">寄语</a>
-            <a href="recruit.html">招募</a>
+        <div class="titleBox">
+            <p>我们是</p>
+            <p>天津理工大学</p>
+            <p>计算机科学与工程学院</p>
+            <p>学生创新实践中心</p>
+            <p>Student Innovation and Practice Center</p>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="assets/img/banner.jpg">
+            </div>
+        </div>
+        <div class="introBox">
+            <div class="topTriangle"></div>
+            <div class="introduction">
+                <div class="pastBox">
+                    <p>过去</p>
+                    <p>Past</p>
+                    <p>她的前身为602工作室，始建于2009年9月，旨在培养大学生创新意识，指导并组织学生进行科技创新、创业及社会实践等活动</p>
+                </div>
+                <div class="decorationBox"></div>
+                <div class="nowBox">
+                    <p>现在</p>
+                    <p>Now</p>
+                    <p>它位于115实验室,自2010年揭牌始</p>
+                </div>
+                <div class="decorationBox"></div>
+                <div class="futureBox">
+                    <p>未来</p>
+                    <p>Future</p>
+                    <p>暂无文案，敬请期待</p>
+                </div>
+                <div class="decorationBox"></div>
+            </div>
+        </div>
+        <div class="topTriangleH"></div>
+        <div class="projectBox">
+            <div class="titleBoxPro">
+                <p>项目</p>
+                <p>Projects</p>
+            </div>
+            <div class="showBox">
+                <div></div>
+            </div>
+        </div>
+        <div class="topTriangleW">
+        </div>
+        <div class="awardBox">
+            <div class="titleBoxAwd">
+                <p>奖项</p>
+                <p>Awards</p>
+            </div>
+            <section class="cd-horizontal-timeline">
+                <div class="timeline">
+                    <div class="events-wrapper">
+                        <div class="events">
+                            <ol>
+                                <!-- 一定要加data-date属性，此属性会根据日期来对轴上的距离以及滚动动画做出调整 -->
+                                <li><a href="#0" data-date="28/01/2014" class="selected">2019</a></li>
+                                <li><a href="#0" data-date="28/02/2014">2018</a></li>
+                                <li><a href="#0" data-date="28/03/2014">2017</a></li>
+                            </ol>
+                            <span class="filling-line" aria-hidden="true"></span>
+                        </div>
+                        <!-- 以上为时间轴 -->
+                    </div>
+                    <!-- .events-wrapper -->
+
+                    <ul class="cd-timeline-navigation">
+                        <li><a href="#0" class="prev inactive">Prev</a></li>
+                        <li><a href="#0" class="next">Next</a></li>
+                    </ul>
+                    <!-- 跳转的两个按钮 -->
+                </div>
+                <!-- 时间轴的内容 li的data-date属性要与上面时间轴相符合 -->
+
+                <div class="events-content">
+                    <ol>
+                        <li class="selected" data-date="28/01/2014" style="line-height: 2em; text-align: center;">
+                            <h3>2019年奖项一览</h3>
+                            <p style="color:black;">
+                                华北五省大学生计算应用大赛一、二、三等奖
+                            </p>
+                            <p style="color:black;">
+                                第十六届挑战杯全国课外学术科技作品竞赛特等奖
+                            </p>
+                            <p style="color:black;">
+                                第十二界大学生信息安全竞赛作品赛二等奖
+                            </p>
+                            <p style="color:black;">
+                                第三届蓝帽杯全国大学生网络安全技能大赛二、三等奖
+                            </p>
+                            <p style="color:black;">
+                                第十二届全国大学生信息安全竞赛创新实践能力三等奖
+                            </p>
+                            <p style="color:black;">
+                                天津市大学生信息安全网络攻防大赛个人赛二等奖
+                            </p>
+                        </li>
+                        <li data-date="28/02/2014" style="line-height: 3em; text-align: center;">
+                            <h3>2018年所获奖项一览(测试)</h3>
+                            <p style="color:black;">
+                                华北五省大学生计算应用大赛一、二、三等奖
+                            </p>
+                            <p style="color:black;">
+                                第十六届挑战杯全国课外学术科技作品竞赛特等奖
+                            </p>
+                            <p style="color:black;">
+                                第十二界大学生信息安全竞赛作品赛二等奖
+                            </p>
+                            <p style="color:black;">
+                                第三届蓝帽杯全国大学生网络安全技能大赛二、三等奖
+                            </p>
+                            <p style="color:black;">
+                                第十二届全国大学生信息安全竞赛创新实践能力三等奖
+                            </p>
+                            <p style="color:black;">
+                                天津市大学生信息安全网络攻防大赛个人赛二等奖
+                            </p>
+                        </li>
+                        <li data-date="28/03/2014" style="line-height: 3em; text-align: center;">
+                            <h3>2018年所获奖项一览(测试)</h3>
+                            <p style="color:black;">
+                                华北五省大学生计算应用大赛一、二、三等奖
+                            </p>
+                            <p style="color:black;">
+                                第十六届挑战杯全国课外学术科技作品竞赛特等奖
+                            </p>
+                            <p style="color:black;">
+                                第十二界大学生信息安全竞赛作品赛二等奖
+                            </p>
+                            <p style="color:black;">
+                                第三届蓝帽杯全国大学生网络安全技能大赛二、三等奖
+                            </p>
+                            <p style="color:black;">
+                                第十二届全国大学生信息安全竞赛创新实践能力三等奖
+                            </p>
+                            <p style="color:black;">
+                                天津市大学生信息安全网络攻防大赛个人赛二等奖
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+        </div>
+        <div class="topTriangleB">
+        </div>
+        <div class="messageBored">
+            <p>留言</p>
+            <div class="inputBox">
+                <input type="email" id="email" placeholder="输入您的邮箱" />
+                <input type="text" id="name" placeholder="我该怎么称呼你呢">
+                <textarea type="text" id="content" placeholder="你有什么对中心的建议吗?"></textarea>
+                <input type="button" id="button" value="SEND">
+            </div>
         </div>
     </div>
+    <div class="bottom">
+        <img src="assets/img/bot.png">
+        <p class="wordDetails">学生创新实践中心 © 2010-2019</p>
+    </div>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery.mobile.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/timeLine.js"></script>
     <script src='assets/js/navbar.js'></script>
+    <script src="assets/js/aboutUs.js"></script>
     <script>
+        aboutUs();
         zyNavbar();
+        $(document).ready(function() {
+            $('.parallax').parallax();
+        });
     </script>
 </body>
 
