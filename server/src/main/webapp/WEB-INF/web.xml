@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>MessageBoardApiServlet</servlet-name>
+        <!--容器-->
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <!--映射的包名，用于搜索处理类-->
+            <param-value>com.sipc.service</param-value>
+        </init-param>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.sipc.Application</param-value>
+        </init-param>
+
+        <!--是否启动时加载-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--mapper-->
+    <servlet-mapping>
+        <servlet-name>MessageBoardApiServlet</servlet-name>
+        <url-pattern>/messageboard/api/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

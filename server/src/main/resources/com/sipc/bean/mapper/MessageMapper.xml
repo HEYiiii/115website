@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE mapper
+        PUBLIC  "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sipc.bean.mapper.MessageMapper">
+
+    <resultMap id="message" type="com.sipc.bean.db.Message">
+        <result column="send_id" property="send_id"/>
+        <result column="time" property="time"/>
+        <result column="content" property="message"/>
+    </resultMap>
+
+    <insert id="addMessage" parameterType="com.sipc.bean.db.Message">
+        INSERT INTO message(send_id,time,content) VALUE (#{send_id},#{time},#{message});
+    </insert>
+
+    <select id="getMessage" resultMap="message">
+        SELECT * FROM message ORDER BY id DESC;
+    </select>
+
+</mapper>
