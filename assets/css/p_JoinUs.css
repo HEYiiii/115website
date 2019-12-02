@@ -59,9 +59,9 @@ p {
 }
 hr {
     width: 130px;
-    color: #d8d8d8;
+    border: none;
     background-color: #d8d8d8;
-    height: 1.5px;
+    height: 2.5px;
 }
 .pDirection:nth-child(even) hr {
     background-color: #fff;
