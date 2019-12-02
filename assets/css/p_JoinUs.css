@@ -1,0 +1,206 @@
+body {
+    background-color: #f7f6f6;
+}
+p {
+    font-family: Didot;
+}@font-face {
+    font-family: 'Didot';
+    src: url('../fonts-family/Didot.ttf');
+}
+/* 导航栏 */
+.pNavbar {
+    position: fixed;
+    top: 0;
+}
+/* 方向内容 */
+@media screen and (max-width: 1024px){
+    .pDir {
+        width: 100%;
+        max-width: 250px;
+        float: none;
+        margin: auto;
+        margin-top: 140px;
+        margin-bottom: 100px;
+    }
+}
+.pDirection {
+    width: 100%;
+    height: 550px;
+    text-align: center;
+    background-color: #fff;
+    margin: 5vw 0 35vw;
+    padding: 30px 20px 10px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    border-radius: 1em;
+}
+.pDirection:nth-child(even) {
+    background-color: #223a4d;
+}
+.pPhotoBox {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    margin:15px auto;
+}
+.pDirection:nth-child(even) .pPhotoBox {
+    background-color: #fff;
+}
+.pDirPhoto {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+.pTitle {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+hr {
+    width: 130px;
+    color: #d8d8d8;
+    background-color: #d8d8d8;
+    height: 1.5px;
+}
+.pDirection:nth-child(even) hr {
+    background-color: #fff;
+}
+.pContent {
+    margin: 1.5em 0.5em auto;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.pDirection:nth-child(even) p {
+    color: #fff;
+}
+
+
+.pDirection:nth-child(odd):hover {
+    background-color: #4dc9cc;
+    transition: .5s linear;
+}
+.pDirection:nth-child(even):hover {
+    background-color: #4dc9cc;
+    transition: .5s linear;
+}
+
+
+/* 底部内容 */
+.pFooter {
+    background-color: #2c2d2f;
+    width: 100%;
+    padding: 25px 5%;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+}
+.pCopyRight {
+    width: 100%;
+    text-align: center;
+    color:#a7a7a8;
+}
+#pSipc-icon {
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    bottom: 0;
+    vertical-align: middle;
+    /* margin-top: 0.5em; */
+}
+.pCopyRight a {
+    font-size: 1.2em;
+    color: #a7a7a8;
+    vertical-align: middle;
+    text-decoration: none;
+}
+/* ************************************************* */
+
+#pDirect{
+    width: 250px;
+    /* width: 100%; */
+    height: 550px;
+    text-align: center;
+    background-color: #fff;
+    margin: 5vw 0 35vw;
+    padding: 30px 20px 10px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    border-radius: 1em;
+    position: absolute;
+    z-index: -10;
+}
+#pText {
+    width: 250px;
+    height: 550px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 5vw 0 35vw;
+    padding: 30px 20px 10px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    border-radius: 1em;
+    position: absolute;
+    z-index: 0;
+}
+#pText:hover {
+    background-color: #4dc9cc;
+    transition: .5s linear;
+}
+#pNone {
+    width: 250px;
+    height: 550px;
+    text-align: center;
+    margin: 5vw 0 35vw;
+    padding: 30px 20px 10px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pDirect {
+    animation: btn2Change .4s ease-out;
+}
+@keyframes btn2Change{
+    0%{
+        transform: translate(50%,-80px) scale(.5,.1);
+    }
+    100%{
+        transform:translate(0,0) scale(1.0,1.0);
+    }
+}
+.pText {
+    animation: pText 0.4s ease-out;
+}
+@keyframes pText{
+    0%{
+        transform: translate(-120px,-60px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+
+.pFooter {
+    animation: btn8Change .4s ease-out;
+}
+@keyframes btn8Change{
+    0%{
+        transform: translate(50%,-200px) scale(.3,1);
+    }
+    100%{
+        transform:translate(0,0) scale(1.0);
+    }
+}
+.pCopyRight {
+    animation: sipclogoChange 0.4s ease-out;
+}
+@keyframes sipclogoChange{
+    0%{
+        transform: translate(120px,-60px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+
