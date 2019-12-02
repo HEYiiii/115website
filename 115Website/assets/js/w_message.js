@@ -191,8 +191,8 @@ function createBox(fewMessage){//要传参
         box.className = "tag";
         pName.className = "w_usename";
         pContent.className = "w_content";
-        pName.innerHTML = fewMessage[i].name + ":"+"<br>";
-        pContent.innerHTML = fewMessage[i].content;
+        pName.innerHTML = fewMessage[i].send_id + ":"+"<br>";
+        pContent.innerHTML = fewMessage[i].message;
         box.appendChild(pName);
         pName.style.color = "rgb(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")";
 
