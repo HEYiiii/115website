@@ -100,8 +100,14 @@ public class GsonProvider<T> implements MessageBodyReader<T>, MessageBodyWriter<
                         MediaType mediaType, MultivaluedMap<String, Object> httpHeaders,
                         OutputStream entityStream) throws IOException, WebApplicationException {
         //TypeAdapter<T> adapter = gson.getAdapter((TypeToken<T>) TypeToken.get(genericType));
-        try (JsonWriter jsonWriter = gson.newJsonWriter(new OutputStreamWriter(entityStream, Charset.forName("UTF-8")))) {
+        JsonWriter jsonWriter = gson.newJsonWriter(new OutputStreamWriter(entityStream, Charset.forName("UTF-8")));
+        try {
             gson.toJson(t, genericType, jsonWriter);
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally {
             jsonWriter.close();
         }
     }

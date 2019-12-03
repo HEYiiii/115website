@@ -16,7 +16,7 @@
     </insert>
 
     <select id="getMessage" resultMap="message">
-        SELECT * FROM message ORDER BY id DESC;
+        SELECT * FROM message ORDER BY id DESC LIMIT 10;
     </select>
 
 </mapper>
