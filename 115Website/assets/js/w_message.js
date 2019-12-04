@@ -80,12 +80,12 @@
 // var fewMessage=getArrayItems(obj,5);
 
 // createBox();
-function rollBalls(){
+function rollBalls() {
     var tagEle = document.getElementsByClassName("tag"),
-    paper = document.getElementsByClassName("tagBall")[0];
+        paper = document.getElementsByClassName("tagBall")[0];
     // var tagEle = "querySelectorAll" in document ? document.querySelectorAll(".tag") : getClass("tag"),
     // paper = "querySelectorAll" in document ? document.querySelector(".tagBall") : getClass("tagBall")[0];
-        RADIUS = 200,
+    RADIUS = 200,
         fallLength = 375,
         tags = [],
         angleX = Math.PI / 375,
@@ -94,8 +94,8 @@ function rollBalls(){
         CY = paper.offsetHeight / 2,
         EX = paper.offsetLeft + document.body.scrollLeft + document.documentElement.scrollLeft,
         EY = paper.offsetTop + document.body.scrollTop + document.documentElement.scrollTop;
-      
-   
+
+
     function innit() {
         for (var i = 0; i < tagEle.length; i++) {
             var a, b;
@@ -108,19 +108,20 @@ function rollBalls(){
             var t = new tag(tagEle[i], x, y, z);
             // tagEle[i].style.color = "rgb(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")";
             tags.push(t);
-        t.move();
+            t.move();
         }
     }
     Array.prototype.forEach = function(callback) {
         for (var i = 0; i < this.length; i++) {
-        callback.call(this[i]);
+            callback.call(this[i]);
         }
     }
+
     function animate() {
         rotateX();
         rotateY();
         tags.forEach(function() {
-        this.move();
+            this.move();
         });
         requestAnimationFrame(animate);
     }
@@ -131,8 +132,7 @@ function rollBalls(){
             angleY = x * 0.0001;
             angleX = y * 0.0001;
         });
-    }
-    else {
+    } else {
         paper.attachEvent("onmousemove", function(event) {
             var x = event.clientX - EX - CX;
             var y = event.clientY - EY - CY;
@@ -140,6 +140,7 @@ function rollBalls(){
             angleX = y * 0.0001;
         });
     }
+
     function rotateX() {
         var cos = Math.cos(angleX);
         var sin = Math.sin(angleX);
@@ -150,6 +151,7 @@ function rollBalls(){
             this.z = z1;
         })
     }
+
     function rotateY() {
         var cos = Math.cos(angleY);
         var sin = Math.sin(angleY);
@@ -168,7 +170,7 @@ function rollBalls(){
     }
     tag.prototype = {
         move: function() {
-            var scale = fallLength / (fallLength - this.z)/1.5;
+            var scale = fallLength / (fallLength - this.z) / 1.5;
             var alpha = (this.z + RADIUS) / (2 * RADIUS);
             var left = this.x + CX - this.ele.offsetWidth / 2 + "px";
             var top = this.y + CY - this.ele.offsetHeight / 2 + "px";
@@ -182,8 +184,9 @@ function rollBalls(){
     innit();
     animate();
 }
-function createBox(fewMessage){//要传参
-    for(var i=0;i<fewMessage.length;i++){//创建盒子
+
+function createBox(fewMessage) { //要传参
+    for (var i = 0; i < fewMessage.length; i++) { //创建盒子
         let boxFather = document.getElementsByClassName("tagBall")[0];
         let box = document.createElement("a");
         let pName = document.createElement("span");
@@ -191,7 +194,7 @@ function createBox(fewMessage){//要传参
         box.className = "tag";
         pName.className = "w_usename";
         pContent.className = "w_content";
-        pName.innerHTML = fewMessage[i].send_id + ":"+"<br>";
+        pName.innerHTML = fewMessage[i].send_id + ":" + "<br>";
         pContent.innerHTML = fewMessage[i].message;
         box.appendChild(pName);
         pName.style.color = "rgb(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")";
@@ -201,22 +204,24 @@ function createBox(fewMessage){//要传参
     }
     rollBalls();
 }
-function changeBoxs(){//底下输入框的切换
-    var w_inputBox1=document.getElementsByClassName("w_inputBox1")[0];
-    var w_inputBox2=document.getElementsByClassName("w_inputBox2")[0];
+
+function changeBoxs() { //底下输入框的切换
+    var w_inputBox1 = document.getElementsByClassName("w_inputBox1")[0];
+    var w_inputBox2 = document.getElementsByClassName("w_inputBox2")[0];
     w_inputBox1.addEventListener("click", inputBox);
-    var name=document.getElementById("name");
-    var ppp=document.getElementById("ppp");
+    var name = document.getElementById("name");
+    var ppp = document.getElementById("ppp");
     console.log("yes2");
+
     function inputBox() {
-            console.log("yes1");
+        console.log("yes1");
         if (name.style.display == "none") {
-            ppp.innerHTML="Hi，";
+            ppp.innerHTML = "Hi，";
             console.log("yes");
-            
-            name.style.display ="inline";
-            w_inputBox1.style.display="none";
-            w_inputBox2.style.display="block";
+
+            name.style.display = "inline";
+            w_inputBox1.style.display = "none";
+            w_inputBox2.style.display = "block";
         }
     }
 }
@@ -225,35 +230,35 @@ $.ajax({
     type: 'get',
     dataType: "json",
     processData: false,
-    url: "http://192.168.115.77:8080/messageboard/api/message/get",
+    url: messageGetUrl,
 
     success: function(result) {
         createBox(result.result);
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
         alert("请求失败");
-        console.log(XMLHttpRequest.status+","+XMLHttpRequest.readyState+","+textStatus);
+        console.log(XMLHttpRequest.status + "," + XMLHttpRequest.readyState + "," + textStatus);
     }
 });
 $('#ajaxBtn').click(function() {
     var dataObj = {
-        name: document.getElementById("name").value,
-        content: document.getElementById('content').value
+        "send_id": document.getElementById("name").value,
+        "message": document.getElementById('content').value
     }
     if (dataObj.name == "" && dataObj.content == "") {
         alert("内容不能为空!");
     }
     $.ajax({
-        type: 'get',
-        dataType: "jsonp",
+        type: 'post',
+        dataType: "JSON",
         processData: false,
-        url: "http://192.168.115.77:8080/messageboard/api/message/add",
-        data: dataObj,
+        url: messageAddUrl,
+        data: JSON.stringify(dataObj),
 
         success: function(result) {
             alert("提交成功");
-            $(".w_inputBox1")[0].style.display="block";
-            $(".w_inputBox2")[0].style.display="none";
+            $(".w_inputBox1")[0].style.display = "block";
+            $(".w_inputBox2")[0].style.display = "none";
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("提交失败");

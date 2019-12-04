@@ -76,14 +76,14 @@ Main Components
     
     .cd-horizontal-timeline .events-wrapper::before {
         left: 0;
-        background-image: -webkit-linear-gradient( left, #f8f8f8, rgba(248, 248, 248, 0));
-        background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+        /* background-image: -webkit-linear-gradient( left, #f8f8f8, rgba(248, 248, 248, 0));
+        background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0)); */
     }
     
     .cd-horizontal-timeline .events-wrapper::after {
         right: 0;
-        background-image: -webkit-linear-gradient( right, #f8f8f8, rgba(248, 248, 248, 0));
-        background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+        /* background-image: -webkit-linear-gradient( right, #f8f8f8, rgba(248, 248, 248, 0));
+        background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0)); */
     }
     
     .cd-horizontal-timeline .events {
@@ -129,7 +129,7 @@ Main Components
         bottom: 0;
         z-index: 2;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.0rem;
         padding-bottom: 15px;
         color: #383838;
         /* fix bug on Safari - text flickering while timeline translates */

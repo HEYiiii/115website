@@ -40,7 +40,7 @@ function message() {
         type: 'get',
         dataType: "json",
         processData: false,
-        url: "http://192.168.115.77:8080/messageboard/api/message/get",
+        url: messageGetUrl,
 
         success: function(response) {
             createBoxRandom(response.result);
@@ -85,8 +85,8 @@ function message() {
     }
 
     function createBoxRandom(message) {
-        const length = 10;
-        if (message.length < length) {
+        let length = 10;
+        if (message.length > length) {
             length = message.length;
         }
         for (let i = 0; i < length; i++) {
@@ -118,7 +118,7 @@ function message() {
             type: 'post',
             dataType: "JSON",
             processData: false,
-            url: "http://192.168.115.77:8080/messageboard/api/message/add",
+            url: messageAddUrl,
             data: dataObj,
             success: function(result) {
                 alert("提交成功");
