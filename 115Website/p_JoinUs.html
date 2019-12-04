@@ -92,6 +92,12 @@
                 </p>
             </div>
         </div>
+        <div class="recruitFile">
+            <div class="recruitFileBox">
+                <p class="wordTitle">2018年纳新计划</p>
+                <p class="wordDetails">详情请点击下载文件</p>
+            </div>
+        </div>
         <div id="pFooter" class="pFooter">
             <p id="pCopyRight" class="pCopyRight">
                 <img src="assets/img/bot4.png" id="pSipc-icon">
@@ -99,14 +105,14 @@
             </p>
         </div>
     </div>
-    <!-- <script src="assets/js/p_Back.js"></script> -->
+    
     <script>
         var nav = document.getElementsByClassName("fa-angle-right")[0];
         nav.addEventListener("click", StartAnimation, false);
 
         function StartAnimation() {
             nav.className = "fa fa-angle-right pBack";
-            setTimeout(function() {
+            setTimeout(function () {
                 document.getElementById("pNavbar").style.display = 'none';
                 window.location = "w_navbar.html";
                 nav.className = "fa fa-angle-right";
