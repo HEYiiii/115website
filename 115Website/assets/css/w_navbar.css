@@ -5,8 +5,8 @@ body {
 }
 
 #w_bar {
-    margin: 30% auto 0px;
-    width: 370px;
+    margin: 40px auto 0px;
+    width: 359px;
     height: 288px;
     clear: both;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .w_bar4 {
-    margin-left: 5rem;
+    margin-left: 4rem;
 }
 
 .w_btn {
@@ -137,16 +137,15 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 140px;
+    height: 110px;
     clear: both;
 }
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:359px) {
     #w_bar {
         margin: 20% auto 0px;
         width: 300px;
         height: 248px;
-        clear: both;
     }
 
     .w_bar1,
@@ -173,10 +172,7 @@ body {
     }
 
     .w_btn {
-        /* margin: 0px -.5px; */
-        border: 1px solid #979797;
         height: 60px;
-        float: left;
     }
     #w_btn1,
     #w_btn7 {
@@ -218,16 +214,20 @@ body {
     .w_bar4 {
         margin-left: 4.05rem;
     }
-    #w_footer {
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 125px;
-        clear: both;
-    }
 }
 
+@media screen and (max-height:550px){
+    
+    #w_bar{
+        margin-top: 30px;
+    }
+}
+@media screen and (min-height:600px){
+    
+    #w_bar{
+        margin-top: 70px;
+    }
+}
 /* 右上右下块的动画 */
 .w_btn2Change {
     animation: btn2Change 0.4s ease-out;
