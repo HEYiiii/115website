@@ -80,6 +80,10 @@
 // var fewMessage=getArrayItems(obj,5);
 
 // createBox();
+// 以上是实验数据
+
+
+
 function rollBalls() {
     var tagEle = document.getElementsByClassName("tag"),
         paper = document.getElementsByClassName("tagBall")[0];
@@ -208,6 +212,7 @@ function createBox(fewMessage) { //要传参
 function changeBoxs() { //底下输入框的切换
     var w_inputBox1 = document.getElementsByClassName("w_inputBox1")[0];
     var w_inputBox2 = document.getElementsByClassName("w_inputBox2")[0];
+    var refresh=document.getElementsByClassName("fa-refresh")[0];
     w_inputBox1.addEventListener("click", inputBox);
     var name = document.getElementById("name");
     var ppp = document.getElementById("ppp");
@@ -221,6 +226,7 @@ function changeBoxs() { //底下输入框的切换
 
             name.style.display = "inline";
             w_inputBox1.style.display = "none";
+            refresh.style.display = "none";
             w_inputBox2.style.display = "block";
         }
     }
@@ -241,28 +247,29 @@ $.ajax({
     }
 });
 $('#ajaxBtn').click(function() {
-    var dataObj = {
+    var Obj = {
         "send_id": document.getElementById("name").value,
         "message": document.getElementById('content').value
     }
-    if (dataObj.name == "" && dataObj.content == "") {
+    if (Obj.name == "" && Obj.content == "") {
         alert("内容不能为空!");
     }
+    var dataObj = JSON.stringify(Obj);
     $.ajax({
+        contentType: "application/json;charset=utf-8",
         type: 'post',
         dataType: "JSON",
         processData: false,
         url: messageAddUrl,
-        data: JSON.stringify(dataObj),
-
+        data: dataObj,
         success: function(result) {
             alert("提交成功");
             $(".w_inputBox1")[0].style.display = "block";
+            $(".fa-refresh")[0].style.display = "block";
             $(".w_inputBox2")[0].style.display = "none";
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("提交失败");
-            // document.getElementsByClassName("inputBoxHid")[0].style.display = "none";
         }
     });
 });
