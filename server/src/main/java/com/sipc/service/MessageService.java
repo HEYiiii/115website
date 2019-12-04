@@ -38,7 +38,7 @@ public class MessageService {
         MessageMapper mapper = sqlSession.getMapper(MessageMapper.class);
         List<Message> messages = mapper.getMessage();
 
-        messages = messages.subList(0,10);
+//        messages = messages.subList(0,10);
 
         return ResponseModel.buildOk(messages);
     }
@@ -53,7 +53,10 @@ public class MessageService {
         logger.info(model.toString());
 
         if(!MessageModel.check(model))
+        {
             return ResponseModel.buildParameterError();
+        }
+
 
         // 开始添加数据
         MessageMapper mapper = sqlSession.getMapper(MessageMapper.class);

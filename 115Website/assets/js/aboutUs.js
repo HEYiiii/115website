@@ -11,7 +11,7 @@ function aboutUs() {
             type: 'post',
             dataType: "JSON",
             processData: false,
-            url: "http://192.168.115.77:8080/messageboard/api/suggestion/add",
+            url: suggestionAddUrl,
             data: JSON.stringify(data),
             success: function(result) {
                 alert("提交成功");
@@ -20,5 +20,34 @@ function aboutUs() {
                 alert("提交失败");
             }
         })
+    })
+
+    function bannerBox() {
+        var pb = document.getElementById('pB');
+        var nb = document.getElementById('nB');
+        var fb = document.getElementById('fB');
+        var db1 = document.getElementById('dB1');
+        var db2 = document.getElementById("dB2");
+        var db3 = document.getElementById("dB3");
+        if (window.innerWidth <= 1000) {
+            pb.className = "pastBoxM";
+            nb.className = "nowBoxM";
+            fb.className = "futureBoxM";
+            db1.className = "decorationBoxM";
+            db2.className = "decorationBoxM";
+            db3.className = "decorationBoxM";
+        }
+        if (window.innerWidth > 1000) {
+            pb.className = "pastBoxP";
+            nb.className = "nowBoxP";
+            fb.className = "futureBoxP";
+            db1.className = "decorationBoxP";
+            db2.className = "decorationBoxP";
+            db3.className = "decorationBoxP";
+        }
+    }
+    bannerBox();
+    window.addEventListener('resize', function() {
+        bannerBox();
     })
 }

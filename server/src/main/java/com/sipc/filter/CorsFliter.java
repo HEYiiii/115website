@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class CorsFliter implements ContainerResponseFilter {
 
+    public static final String MAX_AGE = "1209600";
+
     public ContainerResponse filter(ContainerRequest creq, ContainerResponse cres) {
         cres.getHeaders().add("Access-Control-Allow-Origin", "*");
         /**
@@ -27,7 +29,7 @@ public class CorsFliter implements ContainerResponseFilter {
         /**
          * CORS策略的缓存时间
          */
-        cres.getHeaders().add("Access-Control-Max-Age", "1209600");
+        cres.getHeaders().add("Access-Control-Max-Age", MAX_AGE);
 
         //可以通过 throw new WebApplicationException(Status.UNAUTHORIZED); 来中断请求
 
@@ -48,7 +50,7 @@ public class CorsFliter implements ContainerResponseFilter {
         /**
          * CORS策略的缓存时间
          */
-        cres.getHeaders().add("Access-Control-Max-Age", "1209600");
+        cres.getHeaders().add("Access-Control-Max-Age", MAX_AGE);
 
     }
 
