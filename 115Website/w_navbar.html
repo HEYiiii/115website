@@ -19,12 +19,12 @@
         </div>
         <div id="w_bar">
             <div class="w_bar1">
-                <div class="w_btn w_changes" id="w_btn1">
+                <div class="w_btn w_changes" id="w_btn1" onclick="window.location='aboutUs.html'">
                     <div class="w_btnBox">
                         <p>我们</p>
                     </div>
                 </div>
-                <div class="w_btn w_btn2Change" id="w_btn2">
+                <div class="w_btn w_btn2Change" id="w_btn2" onclick="window.location='aboutUs.html'">
                     <div class="w_btnBox">
                         <p>ABOUT US</p>
                     </div>
@@ -68,26 +68,13 @@
             </div>
         </div>
         <div id="w_footer">
-            <!-- <object src="SIPC_withoutText_银灰色_导航" id="w_sipclogo"></object> -->
             <img src="assets/img/bot2.png" alt="" id="w_sipclogo" class="w_sipclogoChange">
             <p>Student Innovation and Practice Center</p>
             <p>&copy;</p>
             <p>2010-2019</p>
         </div>
     </div>
-    <!-- <script src="assets/js/w_navbar.js"></script> -->
-    <!-- <script src="assets/js/p_Back.js"></script> -->
     <script>
-        function getheight() {
-            var hei = "";
-            var wid = "";
-            hei = window.screen.availHeight;
-            wid = window.screen.availWidth;
-            var h = document.getElementById("w_navbar").style.height = hei + "px";
-            var w = document.getElementById("w_navbar").style.width = wid + "px";
-            console.log(w + "*" + h);
-        }
-        getheight();
         var nav1 = document.getElementsByClassName("fa-angle-left")[0];
         nav1.addEventListener("click", StartAnimation, false);
 
