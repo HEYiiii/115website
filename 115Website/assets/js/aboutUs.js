@@ -29,6 +29,9 @@ function aboutUs() {
         var db1 = document.getElementById('dB1');
         var db2 = document.getElementById("dB2");
         var db3 = document.getElementById("dB3");
+        var ib = document.getElementById("inputBox1");
+        var pj = document.getElementById("projectBox1");
+        var tb = document.getElementById("titleBox1");
         if (window.innerWidth <= 1000) {
             pb.className = "pastBoxM";
             nb.className = "nowBoxM";
@@ -36,6 +39,9 @@ function aboutUs() {
             db1.className = "decorationBoxM";
             db2.className = "decorationBoxM";
             db3.className = "decorationBoxM";
+            ib.className = "inputBoxM";
+            pj.className = "projectBoxM";
+            tb.className = "titleBoxM";
         }
         if (window.innerWidth > 1000) {
             pb.className = "pastBoxP";
@@ -44,6 +50,9 @@ function aboutUs() {
             db1.className = "decorationBoxP";
             db2.className = "decorationBoxP";
             db3.className = "decorationBoxP";
+            ib.className = "inputBoxP";
+            pj.className = "projectBoxP"
+            tb.className = "titleBoxP";
         }
     }
     bannerBox();

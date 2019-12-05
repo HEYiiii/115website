@@ -10,40 +10,47 @@
             
             #app {
                 overflow: hidden;
-                height: 550vh;
+                /* height: 490vh; */
+                height: 520vh;
             }
             
-            .titleBox {
+            .titleBoxP {
                 position: absolute;
                 top: 10vh;
                 left: 10vw;
             }
             
-            .titleBox>p {
+            .titleBoxM {
+                position: absolute;
+                top: 40vh;
+                left: 10vw;
+            }
+            
+            #titleBox1>p {
                 color: white;
             }
             
-            .titleBox>p:nth-child(1) {
+            #titleBox1>p:nth-child(1) {
                 font-size: 10vw;
                 animation: pAnm1 ease-in 1s;
             }
             
-            .titleBox>p:nth-child(2) {
+            #titleBox1>p:nth-child(2) {
                 font-size: 5vw;
                 animation: pAnm2 ease-in 1s;
             }
             
-            .titleBox>p:nth-child(3) {
+            #titleBox1>p:nth-child(3) {
                 font-size: 5vw;
                 animation: pAnm3 ease-in 1s;
             }
             
-            .titleBox>p:nth-child(4) {
+            #titleBox1>p:nth-child(4) {
                 font-size: 10vw;
                 animation: pAnm4 ease-in 1s;
             }
             
-            .titleBox>p:nth-child(5) {
+            #titleBox1>p:nth-child(5) {
                 font-size: 3vw;
                 font-family: 'Courier New', Courier, monospace !important;
                 animation: pAnm5 ease-in 1s;
@@ -153,8 +160,8 @@
             /*以下是移动端的布局*/
             
             .decorationBoxM {
-                width: 22em !important;
-                height: 22em;
+                width: 20em !important;
+                height: 20em;
                 border: 1px solid black;
                 z-index: 1;
             }
@@ -191,7 +198,7 @@
             }
             
             .futureBoxM {
-                top: 120vh;
+                top: 123vh;
                 right: 10vw;
                 z-index: 10;
                 background-color: white;
@@ -230,7 +237,7 @@
             
             .nowBoxP {
                 float: left;
-                top: 55em;
+                top: 45em;
                 left: 20vw;
                 background-color: #f5f5f5;
                 z-index: 10;
@@ -244,11 +251,20 @@
             }
             /*以下为项目块   */
             
-            .projectBox {
+            .projectBoxP {
                 width: 100%;
                 position: relative;
                 background-color: #f5f5f5;
-                height: 110vh;
+                height: 120vh;
+                z-index: 1;
+                top: -30vh;
+            }
+            
+            .projectBoxM {
+                width: 100%;
+                position: relative;
+                background-color: #f5f5f5;
+                height: 100vh;
                 z-index: 1;
                 top: -30vh;
             }
@@ -283,21 +299,47 @@
                 border-style: solid;
                 box-sizing: border-box;
             }
+            /* 项目盒子 */
             
             .showBox {
                 position: relative;
                 top: 10vh;
-                left: 20vw;
                 padding: 1px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
             }
             
             .showBox>div {
                 float: left;
-                width: 40vw;
-                height: 40vh;
+                width: 20em;
+                height: 20em;
                 background-color: #fff;
                 border-radius: 1em;
                 box-shadow: 0px 2px 7px #aaa;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 2em;
+                margin-left: 2em;
+            }
+            
+            .imgBox {
+                width: 20em;
+                height: 20em;
+                margin: auto;
+                z-index: 2;
+            }
+            
+            .showBox>div>div>img {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .showBox>div>p {
+                margin-top: .5em;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.5em;
             }
             /* 奖项盒子 */
             
@@ -318,7 +360,7 @@
                 z-index: 100;
                 text-align: center;
                 right: 10vw;
-                top: -30vh;
+                top: -20vh;
             }
             
             .titleBoxAwd>p:nth-child(1) {
@@ -346,7 +388,7 @@
             
             .topTriangleB {
                 position: relative;
-                top: -90vh;
+                top: -120vh;
                 width: 0;
                 height: 0;
                 border-color: #2c2f32 transparent;
@@ -358,9 +400,9 @@
             .messageBored {
                 background-color: #2c2f32;
                 width: 100%;
-                height: 70vh;
+                height: 80vh;
                 position: relative;
-                top: -90vh;
+                top: -120vh;
                 text-align: center;
             }
             
@@ -369,13 +411,19 @@
                 color: white;
             }
             
-            .inputBox {
+            .inputBoxP {
                 margin-top: 1em;
                 width: 40%;
                 margin-left: 30%;
             }
             
-            .inputBox>input {
+            .inputBoxM {
+                margin-top: 1em;
+                width: 70%;
+                margin-left: 15%;
+            }
+            
+            #inputBox1>input {
                 color: white !important;
             }
             
